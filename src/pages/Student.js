@@ -14,7 +14,7 @@ class Student extends Component {
     }
     async componentDidMount() {
 
-        const res = await axios.get('http://127.0.0.1:8000/api/students');
+        const res = await axios.get('https://boiling-ocean-19585.herokuapp.com/api/students');
         console.log(res);
 
         if(res.data.status=== 200)
@@ -31,7 +31,7 @@ class Student extends Component {
         const thidClickFunda = e.currentTarget;
         thidClickFunda.innerText = "Deleting";
 
-         const res = await axios.delete(`http://127.0.0.1:8000/api/delete-student/${id}`);
+         const res = await axios.delete(`https://boiling-ocean-19585.herokuapp.com/api/delete-student/${id}`);
          if(res.data.status === 200)
          {
             thidClickFunda.closest("tr").remove();

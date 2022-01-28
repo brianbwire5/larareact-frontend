@@ -24,7 +24,7 @@ class Editstudent extends Component
            const stud_id = this.props.match.params.id;
            //console.log(stud_id);
 
-           const res = await axios.get(`http://127.0.0.1:8000/api/edit-student/${stud_id}`);
+           const res = await axios.get(`https://boiling-ocean-19585.herokuapp.com/api/edit-student/${stud_id}`);
            if(res.data.status === 200)
            {
              this.setState({
